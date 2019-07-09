@@ -11,6 +11,7 @@
 nombre d'essai : 11\
 
 le jouere ne voit pas le mot \
+utiliser prompt js pour le mot a definir
 il poste une lettre. Si bon, ca apparait dans le mot, si mauvais, ca enleve une tentative et ca affiche la lettre tentée \
 mise en place des array : \
 1 pour le mot a trouver  \
