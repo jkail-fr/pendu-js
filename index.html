@@ -1,18 +1,27 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>Jeu de pendu en JavaScript</title>
+    <meta charset="utf-8">
+    <title>Jeu de pendu en JavaScript</title>
 
 </head>
 <body>
 <h1>Jeu du pendu</h1>
-<div class="enigme">
-  <p>Veuillez saisir le mot à faire trouver :</p>
-  <p><input type="text" placeholder="Mot à trouver" value="" id="solution"/>
-    <br>
-    <button id="validation">Faire deviner</button></p>
+<div id="enigme">
+    <p style="color:green;">Veuillez saisir le mot à faire trouver :</p>
+    <p><input type="text" placeholder="Mot à trouver" value="" id="solution"/> <br>
+        <button id="validation">Faire deviner</button>
+    </p>
 </div>
-<script src="js/pendu.js">var tata =  tototo()</script>
-</body> 
+
+<div id="chercher">
+    <p style="color:orange;">Veuillez saisir le mot à trouver :</p>
+    <p><input type="text" placeholder="Mot à trouver" value="" id="tentative"/> <br>
+        <button id="deviner">Faire deviner</button>
+    </p>
+</div>
+<button id="reset">reset</button>
+
+<script src="js/pendu.js">var tata = tototo()</script>
+</body>
 </html>
