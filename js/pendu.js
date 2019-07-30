@@ -15,6 +15,7 @@ function reinitialisation()
 		document.getElementById('enigme').style.display = "block";
 		/*document.getElementById('chercher').style.display = "none";*/
 		document.getElementById('solution').value = null;
+		document.getElementById('tentative').value = null;
 		document.querySelector('#statut div#pendu').innerHTML = null;
 		document.querySelector('#proposition span').innerHTML = null;
 		tentatives = nombreTentatives;
