@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Jeu de pendu en JavaScript</title>
+    <link rel="stylesheet" href="./css/pendu.css">
 
 </head>
 <body>
@@ -19,8 +20,11 @@
     <p><input type="text" placeholder="Mot à trouver" value="" id="tentative"/> <br>
         <button id="deviner">Faire deviner</button>
     </p>
+    <div id="mot-mystere"></div>
     <div id="statut">
         <p>Il reste <span class="tentatives"></span> tentatives</p>
+        <p id="proposition">Propositions faites : <span></span> </p>
+        <div id="pendu"></div>
     </div>
 </div>
 <button id="reset">Reset</button>
