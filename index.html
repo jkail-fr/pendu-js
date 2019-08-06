@@ -3,31 +3,43 @@
 <head>
     <meta charset="utf-8">
     <title>Jeu de pendu en JavaScript</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/pendu.css">
 
 </head>
 <body>
-<h1>Jeu du pendu</h1>
-<div id="enigme">
-    <p style="color:green;">Veuillez saisir le mot à faire trouver :</p>
-    <p><input type="text" placeholder="Mot à trouver" value="" id="solution" autocomplete="off" /> <br>
-        <button id="validation">Faire deviner</button>
-    </p>
-</div>
-
-<div id="chercher">
-    <p style="color:orange;">Veuillez saisir la lettre à trouver :</p>
-    <p><input type="text" placeholder="Mot à trouver" value="" id="tentative" autocomplete="off" /> <br>
-        <button id="deviner">Faire deviner</button>
-    </p>
-    <div id="mot-mystere"></div>
-    <div id="statut">
-        <p>Il reste <span class="tentatives"></span> tentatives</p>
-        <p id="proposition">Propositions faites : <span></span> </p>
-        <div id="pendu"></div>
+<div class="container">
+    <h1>Jeu du pendu</h1>
+    <div class="row">
+        <div class="col-sm">
+            <div id="enigme" class="alert alert-success">
+                <p>Veuillez saisir le mot à faire trouver :</p>
+                <p><input type="text" class="form-control" placeholder="Mot à trouver" value="" id="solution" autocomplete="off"/> <br>
+                    <button id="validation" class="btn btn-success">Faire deviner</button>
+                </p>
+            </div>
+            <div id="chercher" class="alert alert-info">
+                <p>Veuillez saisir la lettre à trouver :</p>
+                <p><input type="text" class="form-control" placeholder="Mot à trouver" value="" id="tentative" autocomplete="off"/> <br>
+                    <button id="deviner" class="btn btn-primary">Deviner</button>
+                </p>
+            </div>
+        </div>
+        <div class="col-sm alert alert-warning">
+            <div id="mot-mystere"></div>
+            <div id="statut">
+                <p>Il reste <span class="tentatives"></span> tentatives</p>
+                <p id="proposition">Propositions faites : <span></span></p>
+                <div id="pendu"></div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <button id="reset" class="btn btn-danger btn-lg">Reset</button>
+        </div>
     </div>
+
 </div>
-<button id="reset">Reset</button>
 
 <script src="js/pendu.js"></script>
 </body>
