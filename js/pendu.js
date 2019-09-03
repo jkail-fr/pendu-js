@@ -36,13 +36,13 @@ reset.addEventListener('click', function ()
 });
 
 // vérifier s'il n'y a aps de caractère spéciaux ou de chiffres)
-var forbidden = ["é", "è", "ê", "î", "ô", "â", "à", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+var allowed = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-function checkForbidden(value)
+function checkAllowed(value)
 	{
-		for (var compteur = 0; compteur <= forbidden.length; compteur++)
+		for (var compteur = 0; compteur <= allowed.length; compteur++)
 			{
-				var resultatCheck = value.includes(forbidden[compteur]);
+				var resultatCheck = value.includes(allowed[compteur]);
 				if (resultatCheck === true)
 					{
 						var erreurDetectee = resultatCheck;
@@ -62,9 +62,8 @@ function verification()
 		var solution = document.getElementById('solution').value;
 		solution = solution.toUpperCase();
 		var taille = solution.length;
-		var verificationInput = checkForbidden(solution);
-		console.log(solution);
-		if (verificationInput === true)
+		var verificationInput = checkAllowed(solution);
+		if (verificationInput === false)
 			{
 				reinitialisation();
 				alert('Il ne faut pas de chiffres ou de caractères spéciaux');
@@ -106,8 +105,8 @@ function nouvelleLettre()
 		var tenteTaChance = document.getElementById('tentative').value;
 		tenteTaChance = tenteTaChance.toUpperCase();
 
-		verificationInput = checkForbidden(tenteTaChance);
-		if (verificationInput === true)
+		verificationInput = checkAllowed(tenteTaChance);
+		if (verificationInput === false)
 			{
 				reinitialisation();
 				alert('Il ne faut pas de chiffres ou de caractères spéciaux');
